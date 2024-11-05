@@ -1,0 +1,56 @@
+.square {
+    width: 150px;
+}
+
+.back {
+    float: left;
+    position: relative;
+    width: 50px;
+}
+
+.main-header {
+    text-align: center;
+    font-size: 6em
+}
+
+.page-header {
+    text-align: center;
+    font-size: 4em
+}
+
+.paragraph-section {
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+div.img-text img:hover {
+    width: 170px;
+}
+
+div.img-text img {
+    width: 150px;
+    height: auto;
+}
+
+div.img-text caption {
+    text-align: center;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 20%;
+}
+
+#boxes{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
