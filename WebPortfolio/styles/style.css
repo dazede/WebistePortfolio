@@ -1,5 +1,14 @@
-.square {
-    width: 150px;
+body, html{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.page-header {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 4em;
 }
 
 .back {
@@ -8,38 +17,12 @@
     width: 50px;
 }
 
-.main-header {
-    text-align: center;
-    font-size: 6em
-}
-
-.page-header {
-    text-align: center;
-    font-size: 4em
-}
-
 .paragraph-section {
     text-align: center;
     padding-left: 20%;
     padding-right: 20%;
 }
 
-.img-text img {
-    width: 150px;
-    height: auto;
-}
-
-.caption {
-    text-align: center;
-    width: 100%;
-}
-
 * {
     box-sizing: border-box;
-}
-
-.img-text {
-    padding: 0 6px;
-    float: left;
-    width: 20%;
 }

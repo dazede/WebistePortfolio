@@ -1,42 +1,59 @@
 /*main menu tweens*/
 
+header {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 30vw;
+}
+
+.petal {
+    background-color: white; 
+    border: 2px solid black;
+    position: relative;
+    width: 150px;
+    height: 250px;
+    border-radius: 50% 50% 0 0;
+    transform: rotate(90deg)
+}
+
+.caption {
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 100%;
+}
+
 #menu li{
     position: absolute;
     left: 0;
     list-style: none;
     transition: 0.5s;
     transition-delay: calc(0.1s * var(--i));
-    transform-origin: 160px;
-    transform: rotate(0deg) translateX(100px);
+    transform-origin: 250px;
+    transform: translateX(-100px);
     cursor: pointer;
     opacity: 0;
     transition: 1s;
 }
 
-#menu .square {
+#menu .petal {
     transition: 0.5s;
 }
 
-#menu .square:hover {
+#menu .petal:hover {
     transition: 0s;
-    width: 170px;
-    transform: translateX(-50px);
-}
-
-#menu li:hover{
-    transition: 0s;
-    transform: translateX(-50px);
+    transform: rotate(90deg) translateY(40px);
 }
 
 #menu.active li{
-    transform: rotate(calc(360deg / 5 * var(--i))) translateX(0px);
+    transform: translateX(-210px) rotate(calc(360deg / 5 * var(--i)));
     opacity: 1;
 }
 
 #menu #menu-center {
     position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,6 +63,7 @@
     border-radius: 50%;
     cursor: pointer;
     background-color: rgb(255, 255, 255);
+    font-size: 5em;
 }
 
 #menu.active #menu-center {
@@ -53,18 +71,22 @@
 }
 
 #menu{
-    position: relative;
-    width: 280px;
-    height: 280px;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* width: 300px;
+    height: 300px;*/
 }
 
 #menu-body{
+    top: 0; 
+  left: 0; 
+  z-index: -1; 
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: blueviolet;
 }
 
 @media(prefers-reduced-motion) {

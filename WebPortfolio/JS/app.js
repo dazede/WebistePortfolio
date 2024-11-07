@@ -5,10 +5,12 @@ menuCenter.onclick = function(){
     menu.classList.toggle('active')
 }
 
-let menuItem = document.querySelector('.img-text')
-menuItem.onclick = function(){
-    menuItem.style.transform = "translateX(-50px)";;
-}
+const listItems = document.querySelectorAll('.petal');
+listItems.forEach(item => {
+  item.addEventListener('click', () => {
+    item.style.transform = "rotate(90deg) translateY(80px)";
+  });
+});
 
 function onMenuNavigation(url){
     setTimeout(function() {
