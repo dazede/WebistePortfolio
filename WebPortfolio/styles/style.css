@@ -13,16 +13,45 @@ body, html{
 
 .back {
     float: left;
-    position: relative;
+    position: absolute;
     width: 50px;
+    filter: grayscale(100%);
+    filter: brightness(0.25)
 }
 
 .paragraph-section {
     text-align: center;
+    padding-top: 5%;
     padding-left: 20%;
     padding-right: 20%;
 }
 
+.contact-logo {
+    height: 1.2em;
+    filter: grayscale(100%);
+    filter: brightness(0.25)
+}
+
+.contact-link{
+    padding-top: 5%;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+a:link, a:visited, a:active{
+    text-decoration: none;
+    color: black;
+}
+  
+a:hover {
+    color: black;
+    font-weight: bold;
+}
+
 * {
     box-sizing: border-box;
+}
+
+li {
+    list-style: none;
 }
