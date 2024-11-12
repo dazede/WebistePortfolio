@@ -7,6 +7,7 @@ body, html{
 .page-header {
     margin: 0;
     padding: 0;
+    position: relative;
     text-align: center;
     font-size: 4em;
 }
@@ -14,14 +15,18 @@ body, html{
 .back {
     float: left;
     position: absolute;
-    width: 50px;
+    width: 100px;
     filter: grayscale(100%);
-    filter: brightness(0.25)
+    filter: brightness(0.25);
+    padding: 1%
+}
+
+.back:hover {
+    cursor: pointer;
 }
 
 .paragraph-section {
     text-align: center;
-    padding-top: 5%;
     padding-left: 20%;
     padding-right: 20%;
 }
@@ -33,9 +38,12 @@ body, html{
 }
 
 .contact-link{
-    padding-top: 5%;
     font-size: 1.5em;
     text-align: center;
+}
+
+.contact-info {
+    padding-top: 5%;
 }
 
 a:link, a:visited, a:active{
@@ -53,5 +61,5 @@ a:hover {
 }
 
 li {
-    list-style: none;
+    list-style-type: circle;
 }
