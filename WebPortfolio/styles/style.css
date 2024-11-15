@@ -2,23 +2,24 @@ body, html{
     height: 100%;
     width: 100%;
     overflow: hidden;
+    font-family: "Geist Mono", sans-serif;
 }
 
 .page-header {
+    display: flex;
     margin: 0;
     padding: 0;
-    position: relative;
-    text-align: center;
+    justify-content: center;
     font-size: 4em;
 }
 
 .back {
     float: left;
-    position: absolute;
-    width: 100px;
+    width: 50px;
     filter: grayscale(100%);
     filter: brightness(0.25);
-    padding: 1%
+    padding-left: 20px;
+    padding-top: 20px;
 }
 
 .back:hover {
