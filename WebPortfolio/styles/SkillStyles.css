@@ -1,0 +1,60 @@
+.skill-petal {
+    background-color: white; 
+    border: 2px solid black;
+    position: relative;
+    width: 8em;
+    height: 15em;
+    border-radius: 0 0 50% 50%;
+    transition: transform 1s;
+    animation: bob 2s infinite;
+}
+
+.skill {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30%;
+}
+
+.skill-img {
+    height: 5em;
+}
+
+.container {
+    padding-top: 10%;
+}
+
+.multi-skill{
+    display: block;
+    padding-left: 18%;
+}
+
+#list-top {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#list-bottom {
+    position: relative;
+    display: flex;
+}
+
+li {
+    list-style-type: none;
+    padding-right: 10%;
+}
+
+@keyframes bob {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

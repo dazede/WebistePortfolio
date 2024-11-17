@@ -24,6 +24,13 @@ header {
     padding-top: 100%;
 }
 
+.caption-flip{
+    text-align: center;
+    font-size: 1.5em;
+    padding-bottom: 100%;
+    transform: rotate(180deg);
+}
+
 #menu li{
     position: absolute;
     left: 0;
@@ -85,7 +92,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*width: clamp(100px, 200px, 400px);*/
+    transform: rotate(-20deg);
 }
 
 @media(prefers-reduced-motion) {
