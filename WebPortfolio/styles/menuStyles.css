@@ -6,37 +6,38 @@ header {
     display: flex;
 }
 
-#day-night{
+#day-night-main .day-night-toggle{
     position: fixed;
     top: 0;
     left: 0;
-    padding: 1%;
-}
-
-/*main menu tweens*/
-.petal {
-    background-color: white; 
-    border: 2px solid black;
-    position: relative;
-    width: 150px;
-    height: 250px;
-    border-radius: 50% 50% 0 0;
-    transform: rotate(90deg)
+    padding-top: 1%;
 }
 
 .caption {
     text-align: center;
     font-size: 1.5em;
-    padding-top: 100%;
+    margin-top: 100%;
     color: black;
 }
 
 .caption-flip{
     text-align: center;
     font-size: 1.5em;
-    padding-bottom: 100%;
+    margin-top: 100%;
     transform: rotate(180deg);
     color: black;
+}
+
+.petal {
+    background-color: white; 
+    border: 2px solid black;
+    border-radius: 50% 50% 0 0;
+    transform: rotate(90deg);
+    transition: 0.5s;
+
+    position: relative;
+    width: 150px;
+    height: 250px;
 }
 
 #menu li{
@@ -52,21 +53,7 @@ header {
     transition: 1s;
 }
 
-#menu .petal {
-    transition: 0.5s;
-}
-
-#menu .petal:hover {
-    transition: 0s;
-    transform: rotate(90deg) translateY(40px);
-}
-
-#menu.active li{
-    transform: translateX(-210px) rotate(calc(360deg / 5 * var(--i)));
-    opacity: 1;
-}
-
-#menu #menu-center {
+#menu-center {
     position: absolute;
     width: 200px;
     height: 200px;
@@ -83,18 +70,14 @@ header {
     color: black;
 }
 
-#menu.active #menu-center {
-    transform: rotate(720deg);
-}
-
-#menu{
+#menu {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#menu-body{
+#menu-body {
     top: 0; 
     left: 0; 
     z-index: -1; 
@@ -102,7 +85,23 @@ header {
     justify-content: center;
     align-items: center;
     transform: rotate(-20deg);
+    color: aqua;
 }
+
+.petal:hover {
+    transition: 0s;
+    transform: rotate(90deg) translateY(40px);
+}
+
+#menu.active li{
+    transform: translateX(-210px) rotate(calc(360deg / 5 * var(--i)));
+    opacity: 1;
+}
+
+#menu.active #menu-center {
+    transform: rotate(720deg);
+}
+
 
 @media(prefers-reduced-motion) {
     #menu.active #menu-cente {
@@ -128,3 +127,34 @@ header {
 
     
 }
+
+@media screen and (max-width: 640px) {
+    #menu {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    
+    .petal {
+        background-color: aqua;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .petal {
+        background-color: greenyellow;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .petal {
+        background-color: rgb(183, 0, 255);
+    }
+}
+
+  @media screen and (min-width: 1200px) {
+    .petal {
+        background-color: rgb(255, 192, 192);
+    }
+  }

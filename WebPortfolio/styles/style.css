@@ -1,5 +1,6 @@
+/* Default (Day) Mode */
 :root {
-    /* Default (Day) Mode */
+    
     --background-color: #fff;
     --text-color: #000;
     --grayscale: 100%;
@@ -20,7 +21,6 @@ body.night-mode {
 
 body, html {
     height: 100%;
-    width: 100%;
     margin: 0;
     overflow: hidden;
     font-family: "Geist Mono", sans-serif;
@@ -28,11 +28,11 @@ body, html {
     color: var(--text-color);
 }
 
+/* common header and button styles */
 .page-header {
     display: flex;
-    margin: 0;
-    padding: 0;
     justify-content: center;
+    margin: 0;
     font-size: 4em;
 }
 
@@ -42,13 +42,13 @@ body, html {
     top: 0;
     left: 0;
     cursor: pointer;
-    padding: 20px;
+    margin: 10px;
 }
 
 .day-night-toggle {
     box-sizing: border-box;
-    width: 3em;
-    padding-left: 10px;
+    height: 2.5em;
+    margin-left: 10px;
 }
 
 .day-night-toggle:hover {
@@ -58,7 +58,7 @@ body, html {
 .back {
     box-sizing: border-box;
     float: left;
-    width: 1.5em;
+    height: 2.5em;
     filter: grayscale(var(--grayscale));
     filter: brightness(var(--brightness));
 }
@@ -66,6 +66,13 @@ body, html {
 .back:hover {
     cursor: pointer;
     background-color: var(--link-color);
+}
+
+/* bespoke shared styles */
+#contact-section {
+    text-align: left;   
+    margin-left: 28%;
+    margin-right: 28%;
 }
 
 .paragraph-section {
@@ -81,13 +88,13 @@ body, html {
 
 .contact-link {
     font-size: 1.5em;
-    text-align: center;
 }
 
 .contact-info {
-    padding-top: 5%;
+    margin-top: 10%;
 }
 
+/* link and list styles */
 a:link, a:visited, a:active{
     text-decoration: none;
     color: var(--link-color);
