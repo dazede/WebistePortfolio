@@ -1,8 +1,31 @@
-body, html{
+:root {
+    /* Default (Day) Mode */
+    --background-color: #fff;
+    --text-color: #000;
+    --grayscale: 100%;
+    --brightness: 0;
+    --link-color: #000;
+    --invert: 0;
+}
+  
+/* Night Mode */
+body.night-mode {
+    --background-color: #000;
+    --text-color: #fff;
+    --grayscale: 0%;
+    --brightness: 1;
+    --link-color: #fff;
+    --invert: 1;
+}
+
+body, html {
     height: 100%;
     width: 100%;
+    margin: 0;
     overflow: hidden;
     font-family: "Geist Mono", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .page-header {
@@ -13,17 +36,36 @@ body, html{
     font-size: 4em;
 }
 
+.top-buttons {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.day-night-toggle {
+    box-sizing: border-box;
+    width: 3em;
+    padding-left: 10px;
+}
+
+.day-night-toggle:hover {
+    cursor: pointer;
+}
+
 .back {
+    box-sizing: border-box;
     float: left;
-    width: 50px;
-    filter: grayscale(100%);
-    filter: brightness(0.25);
-    padding-left: 20px;
-    padding-top: 20px;
+    width: 1.5em;
+    filter: grayscale(var(--grayscale));
+    filter: brightness(var(--brightness));
 }
 
 .back:hover {
     cursor: pointer;
+    background-color: var(--link-color);
 }
 
 .paragraph-section {
@@ -34,11 +76,10 @@ body, html{
 
 .contact-logo {
     height: 1.2em;
-    filter: grayscale(100%);
-    filter: brightness(0.25)
+    filter: brightness(var(--brightness)) invert(var(--invert));
 }
 
-.contact-link{
+.contact-link {
     font-size: 1.5em;
     text-align: center;
 }
@@ -49,11 +90,11 @@ body, html{
 
 a:link, a:visited, a:active{
     text-decoration: none;
-    color: black;
+    color: var(--link-color);
 }
   
 a:hover {
-    color: black;
+    color: var(--link-color);
     font-weight: bold;
 }
 

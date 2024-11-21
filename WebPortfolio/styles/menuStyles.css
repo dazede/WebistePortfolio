@@ -1,5 +1,3 @@
-/*main menu tweens*/
-
 header {
     margin: 0;
     padding: 0;
@@ -8,6 +6,14 @@ header {
     display: flex;
 }
 
+#day-night{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1%;
+}
+
+/*main menu tweens*/
 .petal {
     background-color: white; 
     border: 2px solid black;
@@ -22,6 +28,7 @@ header {
     text-align: center;
     font-size: 1.5em;
     padding-top: 100%;
+    color: black;
 }
 
 .caption-flip{
@@ -29,6 +36,7 @@ header {
     font-size: 1.5em;
     padding-bottom: 100%;
     transform: rotate(180deg);
+    color: black;
 }
 
 #menu li{
@@ -72,6 +80,7 @@ header {
     cursor: pointer;
     background-color: rgb(255, 255, 255);
     font-size: 5em;
+    color: black;
 }
 
 #menu.active #menu-center {
