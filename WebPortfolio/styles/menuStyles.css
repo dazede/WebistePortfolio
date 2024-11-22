@@ -28,64 +28,75 @@ header {
     color: black;
 }
 
+#menu-body { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu {
+    transform: rotate(-20deg) translateX(-270px) translateY(-120px);
+}
+
 .petal {
     background-color: white; 
     border: 2px solid black;
     border-radius: 50% 50% 0 0;
     transform: rotate(90deg);
     transition: 0.5s;
-
-    position: relative;
-    width: 150px;
-    height: 250px;
+    width: 9em;
+    height: 15em;
 }
 
 #menu li{
     position: absolute;
-    left: 0;
     list-style: none;
     transition: 0.5s;
     transition-delay: calc(0.1s * var(--i));
-    transform-origin: 250px;
-    transform: translateX(-100px);
-    cursor: pointer;
     opacity: 0;
     transition: 1s;
+    cursor: pointer;
+    transform-origin: 250px;
 }
 
 #menu-center {
     position: absolute;
-    width: 200px;
-    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10000;
+    width: 2.5em;
+    height: 2.5em;
+    z-index: 10;
     transition: 1s ease-in-out;
     border: 2px solid black;
     border-radius: 50%;
     cursor: pointer;
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     font-size: 5em;
-    color: black;
 }
 
-#menu {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#menu-bars {
+    display: inline-block;
 }
 
-#menu-body {
-    top: 0; 
-    left: 0; 
-    z-index: -1; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: rotate(-20deg);
-    color: aqua;
+.bar1, .bar2, .bar3 {
+    width: 0.8em;
+    height: 0.1em;
+    background-color: #000;
+    margin: 10px 0;
+    transition: 0.4s;
+}
+
+.active .bar1 {
+    transform: translate(0, 18px) rotate(-45deg);
+  }
+  
+.active .bar2 {
+    opacity: 0;
+}
+
+.active .bar3 {
+    transform: translate(0, -18px) rotate(45deg);
 }
 
 .petal:hover {
@@ -94,14 +105,9 @@ header {
 }
 
 #menu.active li{
-    transform: translateX(-210px) rotate(calc(360deg / 5 * var(--i)));
+    transform: rotate(calc(360deg / 5 * var(--i)));
     opacity: 1;
 }
-
-#menu.active #menu-center {
-    transform: rotate(720deg);
-}
-
 
 @media(prefers-reduced-motion) {
     #menu.active #menu-cente {
@@ -129,15 +135,17 @@ header {
 }
 
 @media screen and (max-width: 640px) {
-    #menu {
+    #menu-body {
         display: none;
     }
 }
 
 @media screen and (min-width: 640px) {
-    
     .petal {
         background-color: aqua;
+    }
+    #menu-body {
+        margin-top: 25%;
     }
 }
 
@@ -145,16 +153,34 @@ header {
     .petal {
         background-color: greenyellow;
     }
+    #menu-body {
+        margin-top: 15%;
+    }
 }
 
 @media screen and (min-width: 1024px) {
     .petal {
         background-color: rgb(183, 0, 255);
     }
+    #menu-body {
+        margin-top: 5%;
+    }
 }
 
   @media screen and (min-width: 1200px) {
     .petal {
         background-color: rgb(255, 192, 192);
+    }
+    #menu-body {
+        margin-top: 0%;
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    .petal {
+        background-color: rgb(255, 0, 0);
+    }
+    #menu-body {
+        margin-top: -10%;
     }
   }

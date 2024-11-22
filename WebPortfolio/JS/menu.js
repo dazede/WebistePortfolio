@@ -4,19 +4,23 @@ let menu = document.querySelector('#menu')
   menuCenter.addEventListener('click', () => {
   menu.classList.toggle('open');
   const isOpen = menu.classList.contains('open');
-  sessionStorage.setItem('menuState', isOpen ? 'open' : 'closed');
+  localStorage.setItem('menuState', isOpen ? 'open' : 'closed');
 });
 
-if (sessionStorage.getItem('menuState') === 'open') {
+if (localStorage.getItem('menuState') === 'open') {
   menu.classList.add('open');
   setTimeout(function() {
-    menu.classList.toggle('active')
+    menu.classList.toggle('active'),
+    menuCenter.classList.toggle('active'),
+    menuCenter.style.transform = "rotate(720deg)"
   }, 100);
 }
 
 /* menu anims*/
 menuCenter.onclick = function(){
-    menu.classList.toggle('active')
+    menu.classList.toggle('active'),
+    menuCenter.classList.toggle('active'),
+    menuCenter.style.transform = localStorage.getItem('menuState') === 'open' ? "rotate(360deg)" : "rotate(-360deg)";
 }
 
 /*animate menu 'petal' on click*/
