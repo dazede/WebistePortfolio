@@ -1,3 +1,21 @@
+
+.top-skills {
+    background-color: brown;
+    height: 35%
+}
+
+#list {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    list-style-type: none;
+    padding-right: 3%;
+}
+
 .skill-petal {
     background-color: var(--background-color);
     border: 2px solid var(--text-color);
@@ -21,30 +39,35 @@
     height: 5em;
 }
 
-.container {
-    padding-top: 10%;
-}
-
 .multi-skill{
     display: block;
     padding-left: 18%;
 }
 
-#list-top {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* scrolling text*/
+.scrolling-text-container {
+    border-radius: 4px;
+    overflow: hidden;
 }
 
-#list-bottom {
-    position: relative;
+.scrolling-text{
     display: flex;
+    white-space: nowrap;
+    padding-top: 15px;
+    font-size: 3em;
+    font-weight: 600;
 }
 
-li {
-    list-style-type: none;
-    padding-right: 10%;
+.scrolling-text-item {
+    padding: 0 30px;
+}
+
+.scrolling-text>div {
+    animation: scroll-left 10s linear infinite;
+}
+
+.scrolling-text-container:hover .scrolling-text>div {
+    animation-play-state: paused;
 }
 
 @keyframes bob {
@@ -56,5 +79,15 @@ li {
     }
     100% {
         transform: translateY(0);
+    }
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
     }
 }

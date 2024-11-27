@@ -2,21 +2,24 @@
 <html>
     <head>
         <title>Daisy's Portfolio</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Doto">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Geist+Mono">
         <link href="../styles/style.css" rel="stylesheet" />
         <link href="../styles/SkillStyles.css" rel="stylesheet" />
         <script defer src="../JS/app.js"></script>
         <script defer src="../JS/skill.js"></script>
     </head>
     <body>
+        <h1 class="page-header">SKILLS</h1>
         <div class="top-buttons">
             <a href="main.html">
                 <img class="back" src="../images/back.png" alt="back-button">
             </a>
             <img class="day-night-toggle" src="../images/sun.png" alt="sun">
         </div>
-        <h1 class="page-header">SKILLS</h1>
+        
 
-        <div>
+        <div class="top-skills">
             <p> 
                 SKILLS
                  Passionate and dedicated work ethic
@@ -24,9 +27,8 @@
             </p>
         </div>
 
-    
         <div class="container">
-            <ul id="list-top">
+            <ul id="list">
                 <li >
                     <div class="skill-petal" style="--i:0;">
                         <p class="skill">
@@ -58,9 +60,7 @@
                         </p>
                     </div>
                 </li>
-            </ul>
-
-            <ul id="list-bottom">
+    
                 <li >
                     <div class="skill-petal" style="--i:1;">
                         <p class="skill">
@@ -94,6 +94,14 @@
                     </div>
                 </li>
             </ul>
+        </div>
+
+        <div class="scrolling-text-container">
+            <div class="scrolling-text">
+                <div class="scrolling-text-item">scrolling text</div>
+                <div class="scrolling-text-item">scrolling text</div>
+                <div class="scrolling-text-item">scrolling text</div>
+            </div>
         </div>
     </body>
 </html>
