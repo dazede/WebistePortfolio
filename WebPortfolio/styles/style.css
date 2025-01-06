@@ -21,7 +21,7 @@ body.night-mode {
 body, html {
     height: 100%;
     margin: 0;
-    overflow: hidden;
+    overflow: auto;
     font-family: "Geist Mono";
     background-color: var(--background-color);
     color: var(--text-color);
@@ -50,7 +50,6 @@ body, html {
     box-sizing: border-box;
     height: 2.5em;
     margin-left: 10px;
-   
 }
 
 .day-night-toggle:hover {
@@ -142,4 +141,18 @@ li {
     #contact-section {
         font-size: 0.8em;
     }
+
+    .page-header {
+        font-size: 5em;
+    }
+
+    
+.day-night-toggle {
+    height: 2em;
+    margin-left: 10px;
+}
+
+.back {
+    height: 2em;
+}
 }

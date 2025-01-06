@@ -7,5 +7,6 @@ document.querySelectorAll('.skill-petal').forEach((element) => {
 
   /* clone scrolling text */
   const text = document.getElementById('.scrolling-text');
+  const container = document.getElementById('.scrolling-text-container');
   const clonedText = text.cloneNode(true);
   container.appendChild(clonedText);

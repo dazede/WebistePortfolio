@@ -6,6 +6,10 @@ header {
     display: flex;
 }
 
+body, html {
+    overflow: hidden;
+}
+
 #day-night-main .day-night-toggle{
     position: fixed;
     top: 0;
@@ -159,14 +163,14 @@ header {
     }
 }
 
-  @media screen and (min-width: 1200px) {
-    #menu-body {
-        margin-top: 0%;
-    }
-  }
+@media screen and (min-width: 1200px) {
+#menu-body {
+    margin-top: 0%;
+}
+}
 
-  @media screen and (min-width: 1600px) {
-    #menu-body {
-        margin-top: -10%;
-    }
-  }
+@media screen and (min-width: 1600px) {
+#menu-body {
+    margin-top: -10%;
+}
+}
