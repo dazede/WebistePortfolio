@@ -98,7 +98,6 @@ body, html {
     padding-left: 20%;
     padding-right: 20%;
     margin-bottom: 10%;
-    background-color: brown;
 }
 
 .contact-logo {
@@ -116,6 +115,15 @@ body, html {
 
 .work-header {
     font-size: 3em;
+}
+
+#work-list{
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: -8%;
+    margin-bottom: 10%;
+    text-align: left;
+
 }
 
 /* link and list styles */
