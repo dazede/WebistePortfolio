@@ -4,7 +4,9 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 32%;
+    height: 30%;
+    margin-right: 15%;
+    margin-left: 15%; 
 }
 
 .list {
@@ -55,26 +57,25 @@ li {
 /* scrolling text*/
 .scrolling-text-container {
     border-radius: 4px;
+    white-space: nowrap;
+    position: relative;
     overflow: hidden;
 }
 
 .scrolling-text{
-    display: flex;
-    white-space: nowrap;
+    display: inline-block;
     padding-top: 15px;
     font-size: 3em;
     font-weight: 600;
+    animation: scroll 20s linear infinite;
 }
 
 .scrolling-text-item {
-    padding: 0 1.5em;
+    display: inline-block;
+    padding: 0 2em;
 }
 
-.scrolling-text>div {
-    animation: scroll-left 5s linear infinite;
-}
-
-.scrolling-text-container:hover .scrolling-text>div {
+.scrolling-text-container:hover .scrolling-text {
     animation-play-state: paused;
 }
 
@@ -90,13 +91,13 @@ li {
     }
 }
 
-@keyframes scroll-left {
+@keyframes scroll {
     0% {
         transform: translateX(0%);
     }
 
     100% {
-        transform: translateX(-80%);
+        transform: translateX(-100%);
     }
 }
 
