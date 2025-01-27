@@ -2,13 +2,13 @@
 const dayNightImage = document.querySelector('.day-night-toggle');
 dayNightImage.onclick = function(){
   let isDay = true;
-  if (dayNightImage.src.endsWith('sun.PNG')) {
+  if (dayNightImage.src.endsWith('sun.png')) {
     isDay = false;
-    dayNightImage.src = 'WebPortfolio\/images\/moon.PNG';
+    dayNightImage.src = 'WebPortfolio\/images\/moon.png';
     document.body.classList.add('night-mode');
   } else {
     isDay = true;
-    dayNightImage.src = 'WebPortfolio\/images\/sun.PNG';
+    dayNightImage.src = 'WebPortfolio\/images\/sun.png';
     document.body.classList.remove('night-mode');
   }
 
@@ -17,9 +17,9 @@ dayNightImage.onclick = function(){
 
 if (localStorage.getItem('nightMode') === 'night') {
   document.body.classList.add('night-mode');
-  dayNightImage.src = 'WebPortfolio\/images\/moon.PNG'; 
+  dayNightImage.src = 'WebPortfolio\/images\/moon.png'; 
 }
 else {
   document.body.classList.remove('night-mode'); 
-  dayNightImage.src = 'WebPortfolio\/images\/sun.PNG';
+  dayNightImage.src = 'WebPortfolio\/images\/sun.png';
 }
